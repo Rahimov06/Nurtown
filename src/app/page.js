@@ -6,7 +6,7 @@ import { TextField } from "@mui/material";
 export default function Home() {
   return (
     <>
-      <main className="flex gap-5 w-[85%] m-auto justify-between items-center">
+      <section className="flex gap-5 w-[85%] m-auto justify-between items-center">
         <div>
           <h1 className="text-7xl">
             <span className="text-gray-400">PROJECT</span> <br />
@@ -28,7 +28,7 @@ export default function Home() {
 
         </div>
         <Image src={"/Rectangle 6.png"} width={770} height={829} alt="not found" />
-      </main>
+      </section>
 
       <section className="flex items-center w-[85%] m-auto justify-around mt-[150px]">
         <div className=" flex items-center gap-6 ">
@@ -111,7 +111,7 @@ export default function Home() {
             <TextField sx={{ width: "420px" }} label="Номер телефона*" variant="outlined"/> <br /><br />
             <TextField sx={{ width: "420px" }} label="E-mail*" variant="outlined"/> <br /><br />
             <TextField sx={{ width: "420px" }} label="Интересующий товар/услуга" variant="outlined"/> <br /><br />
-            <textarea className="h-[100px] w-[420px]  border border-gray-300 p-3"  placeholder="Сообщение*" variant="outlined"/>
+            <textarea className="h-[100px] w-[420px] rounded-[5px] border border-gray-300 p-3"  placeholder="Сообщение*" variant="outlined"/>
 
           </form>
 
