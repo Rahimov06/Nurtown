@@ -1,6 +1,6 @@
-/* eslint-disable jsx-a11y/alt-text */
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 export default function Home() {
   return (
@@ -42,12 +42,15 @@ export default function Home() {
           <h1 className="text-7xl text-gray-400">О компании</h1> <br />
           <p className="text-[16px]">Lorem Ipsum is simply dummy text of the printing and <br />
             typesetting industry. Lorem Ipsum has been the <br />
-            industry's standard dummy text ever since the 1500s, <br />
+            industrys standard dummy text ever since the 1500s, <br />
             when an unknown printer took a galley of type and <br />
             scrambled it to make a type specimen book. It has <br />
             survived not only five centuries, but also the leap into <br />
             electronic typesetting, remaining essentially <br />
-            unchanged.</p>
+            unchanged.</p> <br /> <br />
+
+          <button className="bg-white border border-gray-100 p-[10px_20px]">Читать  <ArrowRightAltIcon/></button>
+
         </div>
       </section>
 
@@ -72,11 +75,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section >
         <h1 className="text-7xl text-gray-400">Наши проекты</h1> <br />
 
-        <div>
-         
+        <div className="grid grid-cols-4 grid-rows-2">
+
+          <div className="bg1 col-end-2">
+            <h1 className="text-7xl text-white">ДОСУГОВЫЙ <br />
+              ЦЕНТР</h1>
+          </div>
+
+          <Image className=" col-end-3" src={"/image 15.png"} width={570} height={255} alt="not found" />
+          <Image src={"/image 16.png"} width={270} height={255} alt="not found" />
+          <Image src={"/image 17.png"} width={470} height={255} alt="not found" />
+          <Image src={"/image 18.png"} width={370} height={255} alt="not found" />
+
+
+
 
         </div>
 

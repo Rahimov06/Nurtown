@@ -1,0 +1,51 @@
+
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+
+const Footer = () => {
+  return (
+    <footer className='bg-[#2C2C2C] text-white flex items-start justify-around  p-[40px_0px]'>
+
+      <Image src={"/Group 11 1.png"} width={145} height={94} alt='not found' />
+      <div>
+        <strong>Информация</strong> <br /> <br />
+        <Link href={"/"} >Главная</Link> <br /><br />
+        <Link href={"/photo"} >Галерея</Link><br /><br />
+        <Link href={"/project"} >Проекты</Link><br /> <br />
+        <Link href={"/certification"} >Сертификаты</Link><br /> <br />
+        <Link href={"/contact"} >Контакты</Link>
+      </div>
+
+      <div>
+        <strong>Контакты</strong> <br /><br />
+        <p className='flex gap-4'> <LocationOnOutlinedIcon />  100000, Республика  Казахстан, <br />
+          г. Караганда, ул. Телевизионная 10</p> <br /><br />
+        <p><LocalPhoneOutlinedIcon /> +7 (701) 77 76 811 </p><br /><br />
+        <p> <EmailOutlinedIcon/> Galym.sultanov@mail.ru</p>
+      </div>
+
+      <div>
+        <strong>Социальные сети</strong> <br /><br />
+
+        <div className='flex gap-6 items-center'>
+          <FacebookIcon />
+          <TwitterIcon />
+          <LinkedInIcon />
+          <PinterestIcon/>
+        </div>
+
+
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;
