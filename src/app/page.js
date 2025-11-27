@@ -6,7 +6,7 @@ import { TextField } from "@mui/material";
 export default function Home() {
   return (
     <>
-      <main className="flex  w-[85%] m-auto justify-between items-center">
+      <main className="flex gap-5 w-[85%] m-auto justify-between items-center">
         <div>
           <h1 className="text-7xl">
             <span className="text-gray-400">PROJECT</span> <br />
@@ -79,20 +79,20 @@ export default function Home() {
       <section className="w-[85%] m-auto">
         <h1 className="text-7xl text-gray-400">Наши проекты</h1> <br />
 
-        <div className="flex justify-between ">
+        <div className="flex justify-between gap-5">
 
-          <div className="bg1 w-[600px] h-[255px] p-[20px_20px] ">
+          <div className="bg1 w-[570px] h-[255px] p-[20px_20px] ">
             <h1 className="text-7xl text-white">ДОСУГОВЫЙ <br />
               ЦЕНТР</h1>
           </div>
-          <Image className="h-[255px]" src={"/image 15.png"} width={600} height={255} alt="not found" />
+          <Image className="h-[255px]" src={"/image 15.png"} width={570} height={255} alt="not found" />
         </div>
         <br /><br />
         <div className="flex justify-between">
 
-          <Image src={"/image 16.png"} width={300} height={255} alt="not found" />
+          <Image src={"/image 16.png"} width={270} height={255} alt="not found" />
           <Image src={"/image 17.png"} width={470} height={255} alt="not found" />
-          <Image src={"/image 18.png"} width={400} height={255} alt="not found" />
+          <Image src={"/image 18.png"} width={370} height={255} alt="not found" />
         </div>
         <br /><br />
         <button className="p-[20px_25px] ml-[83%] bg-[#333333] text-white">ВСЕ ПРОЕКТЫ  <ArrowRightAltIcon /></button>
@@ -104,19 +104,19 @@ export default function Home() {
 
         <h1 className="text-7xl text-gray-400">Связаться с нами</h1> <br /><br />
 
-        <div className="flex justify-between items-center">
+        <div className="flex gap-5 justify-between items-center">
 
           <form action="">
-            <TextField sx={{width:"450px"}} label="Имя" variant="outlined"/> <br /><br />
-            <TextField sx={{ width: "450px" }} label="Номер телефона*" variant="outlined"/> <br /><br />
-            <TextField sx={{ width: "450px" }} label="E-mail*" variant="outlined"/> <br /><br />
-            <TextField sx={{ width: "450px" }} label="Интересующий товар/услуга" variant="outlined"/> <br /><br />
-            <textarea className="h-[100px] w-[450px]  border border-gray-300 p-3"  placeholder="Сообщение*" variant="outlined"/>
+            <TextField sx={{width:"420px"}} label="Имя" variant="outlined"/> <br /><br />
+            <TextField sx={{ width: "420px" }} label="Номер телефона*" variant="outlined"/> <br /><br />
+            <TextField sx={{ width: "420px" }} label="E-mail*" variant="outlined"/> <br /><br />
+            <TextField sx={{ width: "420px" }} label="Интересующий товар/услуга" variant="outlined"/> <br /><br />
+            <textarea className="h-[100px] w-[420px]  border border-gray-300 p-3"  placeholder="Сообщение*" variant="outlined"/>
 
           </form>
 
 
-          <Image src={"/image 12.png"} className="h-[420px]" width={760} height={500} alt="not found"/>
+          <Image src={"/image 12.png"} className="h-[420px]" width={749} height={420} alt="not found"/>
         </div> <br />
 
         <p>Отправляя заявку Вы соглашаетесь
