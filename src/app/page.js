@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { TextField } from "@mui/material";
 
 export default function Home() {
   return (
@@ -32,10 +33,10 @@ export default function Home() {
       <section className="flex items-center w-[85%] m-auto justify-around mt-[150px]">
         <div className=" flex items-center gap-6 ">
           <div>
-          <Image src={"/Rectangle 8.png"} width={270} height={265} alt="not found"/> <br />
-          <Image src={"/Rectangle 10.png"} width={270} height={140} alt="not found"/>
+            <Image src={"/Rectangle 8.png"} width={270} height={265} alt="not found" /> <br />
+            <Image src={"/Rectangle 10.png"} width={270} height={140} alt="not found" />
           </div>
-          <Image src={"/Rectangle 9.png"} width={270} height={345} alt="not found"/>
+          <Image src={"/Rectangle 9.png"} width={270} height={345} alt="not found" />
         </div>
 
         <div>
@@ -49,7 +50,7 @@ export default function Home() {
             electronic typesetting, remaining essentially <br />
             unchanged.</p> <br /> <br />
 
-          <button className="bg-white border border-gray-100 p-[10px_20px]">Читать  <ArrowRightAltIcon/></button>
+          <button className="bg-white border border-gray-100 p-[10px_20px]">Читать  <ArrowRightAltIcon /></button>
 
         </div>
       </section>
@@ -75,25 +76,55 @@ export default function Home() {
         </div>
       </section>
 
-      <section >
+      <section className="w-[85%] m-auto">
         <h1 className="text-7xl text-gray-400">Наши проекты</h1> <br />
 
-        <div className="grid grid-cols-4 grid-rows-2">
+        <div className="flex justify-between ">
 
-          <div className="bg1 col-end-2">
+          <div className="bg1 w-[600px] h-[255px] p-[20px_20px] ">
             <h1 className="text-7xl text-white">ДОСУГОВЫЙ <br />
               ЦЕНТР</h1>
           </div>
-
-          <Image className=" col-end-3" src={"/image 15.png"} width={570} height={255} alt="not found" />
-          <Image src={"/image 16.png"} width={270} height={255} alt="not found" />
-          <Image src={"/image 17.png"} width={470} height={255} alt="not found" />
-          <Image src={"/image 18.png"} width={370} height={255} alt="not found" />
-
-
-
-
+          <Image className="h-[255px]" src={"/image 15.png"} width={600} height={255} alt="not found" />
         </div>
+        <br /><br />
+        <div className="flex justify-between">
+
+          <Image src={"/image 16.png"} width={300} height={255} alt="not found" />
+          <Image src={"/image 17.png"} width={470} height={255} alt="not found" />
+          <Image src={"/image 18.png"} width={400} height={255} alt="not found" />
+        </div>
+        <br /><br />
+        <button className="p-[20px_25px] ml-[83%] bg-[#333333] text-white">ВСЕ ПРОЕКТЫ  <ArrowRightAltIcon /></button>
+
+
+      </section>
+
+      <section className="w-[85%] m-auto pb-[100px] pt-[100px] ">
+
+        <h1 className="text-7xl text-gray-400">Связаться с нами</h1> <br /><br />
+
+        <div className="flex justify-between items-center">
+
+          <form action="">
+            <TextField sx={{width:"450px"}} label="Имя" variant="outlined"/> <br /><br />
+            <TextField sx={{ width: "450px" }} label="Номер телефона*" variant="outlined"/> <br /><br />
+            <TextField sx={{ width: "450px" }} label="E-mail*" variant="outlined"/> <br /><br />
+            <TextField sx={{ width: "450px" }} label="Интересующий товар/услуга" variant="outlined"/> <br /><br />
+            <textarea className="h-[100px] w-[450px]  border border-gray-300 p-3"  placeholder="Сообщение*" variant="outlined"/>
+
+          </form>
+
+
+          <Image src={"/image 12.png"} className="h-[420px]" width={760} height={500} alt="not found"/>
+        </div> <br />
+
+        <p>Отправляя заявку Вы соглашаетесь
+          с политикой <br />
+          конфиденциальности</p>
+        <br />
+        <button className="p-[20px_25px]  bg-[#333333] text-white">ВСЕ ПРОЕКТЫ  <ArrowRightAltIcon /></button>
+
 
 
       </section>
