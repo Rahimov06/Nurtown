@@ -23,12 +23,12 @@ const page = () => {
 
         </button>
         <button className=" cursor-pointer p-[15px_20px] ml-5 bg-gray-200 rounded-xl">
-
           <FaArrowRight size={28} color="#333" />
         </button>
       </div>
     </>
   );
+  
 }
 
 export default page;
