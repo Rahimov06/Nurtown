@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { TextField } from "@mui/material";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -95,7 +96,7 @@ export default function Home() {
           <Image src={"/image 18.png"} width={370} height={255} alt="not found" />
         </div>
         <br /><br />
-        <button className="p-[20px_25px] ml-[83%] bg-[#333333] text-white">ВСЕ ПРОЕКТЫ  <ArrowRightAltIcon /></button>
+        <Link href={"/project"} className="p-[20px_25px] ml-[83%] bg-[#333333] text-white">ВСЕ ПРОЕКТЫ  <ArrowRightAltIcon /></Link>
 
 
       </section>
