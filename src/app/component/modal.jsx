@@ -85,7 +85,7 @@ export default function NestedModal() {
             <p><input type="checkbox" /> Отправляя заявку Вы соглашаетесь
               с политикой
               конфиденциальности</p>
-          </form>
+          </form> <br />
           <ChildModal />
         </Box>
       </Modal>
