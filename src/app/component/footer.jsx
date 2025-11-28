@@ -12,6 +12,7 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 
 const Footer = () => {
   return (
+    <>
     <footer className='bg-[#2C2C2C] text-white flex items-start justify-around  p-[40px_0px]'>
 
       <Image src={"/Group 11 1.png"} width={145} height={94} alt='not found' />
@@ -44,7 +45,9 @@ const Footer = () => {
 
 
       </div>
-    </footer>
+      </footer>
+      <p className='bg-[#2C2C2C]  text-center p-[20px_0px] border-t border-t-gray-500 text-gray-500'>© 2019 Digital Project. Все права защищены.</p>
+    </>
   );
 }
 
