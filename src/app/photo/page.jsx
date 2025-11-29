@@ -19,11 +19,13 @@ const page = () => {
   return (
     <>
 
-      <h1 className='text-7xl p-[100px_8%]'><span className='text-gray-400'>ГАЛЕРЕЯ</span> <br />
+      <h1 className='text-7xl max-md:text-4xl p-[80px_8%] md:text-start pb-[50px] text-center'>
+        <span className='text-gray-400'>ГАЛЕРЕЯ</span> <br />
         <strong>ФОТОГРАФИЙ</strong>
       </h1>
 
-      <section>
+      <section className="w-full max-md:px-4">
+
         <div className="max-w-[85%] mx-auto p-4 hidden md:block">
           <div className="grid grid-cols-5 gap-4">
             {images.map((src, i) => (
@@ -37,21 +39,47 @@ const page = () => {
               />
             ))}
           </div>
+          <div className='flex items-center gap-4 p-[30px_0px] mt-4'>
+            <p className='text-4xl max-md:text-3xl'>
+              <strong>01</strong> <span className='text-gray-400'>/ 05</span>
+            </p>
+            <button className="cursor-pointer p-[10px_15px] bg-gray-200 rounded-xl">
+              <FaArrowLeft size={24} color="#333" />
+            </button>
+            <button className="cursor-pointer p-[10px_15px] bg-gray-200 rounded-xl">
+              <FaArrowRight size={24} color="#333" />
+            </button>
+          </div>
+
         </div>
 
-        <div className='flex w-[85%] m-auto justify-start items-center'>
-          <p className='text-5xl p-[100px_8%]'><strong>01</strong>  <span className='text-gray-400'>/  05</span> </p>
-          <button className=" cursor-pointer p-[15px_20px] bg-gray-200 rounded-xl">
-            <FaArrowLeft size={28} color="#333" />
+        <div className='flex md:hidden pb-[50px] flex-col max-md:items-center w-full gap-6 mt-10'>
+          {images.map((src, i) => (
+            <Image
+              key={i}
+              src={src}
+              width={400}
+              height={250}
+              alt={`img-mobile-${i}`}
+              className="w-full max-w-[85%] h-[250px] object-cover rounded-lg"
+            />
+          ))}
 
-          </button>
-          <button className=" cursor-pointer p-[15px_20px] ml-5 bg-gray-200 rounded-xl">
-
-            <FaArrowRight size={28} color="#333" />
-          </button>
+          <div className='flex items-center gap-4 mt-4'>
+            <p className='text-4xl max-md:text-3xl'>
+              <strong>01</strong> <span className='text-gray-400'>/ 05</span>
+            </p>
+            <button className="cursor-pointer p-[10px_15px] bg-gray-200 rounded-xl">
+              <FaArrowLeft size={24} color="#333" />
+            </button>
+            <button className="cursor-pointer p-[10px_15px] bg-gray-200 rounded-xl">
+              <FaArrowRight size={24} color="#333" />
+            </button>
+          </div>
         </div>
 
       </section>
+
     </>
   );
 }

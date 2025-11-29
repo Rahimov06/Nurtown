@@ -39,8 +39,6 @@ export default function Home() {
 
       <section className="flex items-center w-[85%] m-auto justify-around mt-[150px]
               max-md:flex-col max-md:mt-10 max-md:gap-10">
-
-        {/* LEFT IMAGES */}
         <div className="flex items-center gap-6 max-md:flex-col max-md:w-full">
 
           <div className="flex flex-col gap-5 max-md:w-full">
@@ -91,7 +89,6 @@ export default function Home() {
 
       </section>
 
-
       <section className="w-[85%] m-auto mt-[100px] max-md:mt-10">
         <h1 className="text-7xl text-gray-400 max-md:text-4xl max-md:text-center">
           Основные задачи
@@ -99,7 +96,6 @@ export default function Home() {
 
         <div className="flex md:flex-row flex-col items-start md:items-center justify-between mt-10 gap-12">
 
-          {/* CARD 1 */}
           <div className="flex items-start gap-5 max-md:gap-3 max-md:flex-col max-md:text-center">
             <p className="text-[200px] text-gray-300 leading-none max-md:text-[80px]">
               1
@@ -110,7 +106,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* CARD 2 */}
           <div className="flex items-start gap-5 max-md:gap-3 max-md:flex-col max-md:text-center">
             <p className="text-[200px] text-gray-300 leading-none max-md:text-[80px]">
               2
