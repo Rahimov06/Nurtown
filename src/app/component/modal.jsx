@@ -41,7 +41,7 @@ function ChildModal() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 460, textAlign:"center" }}>
+        <Box sx={{ ...style, width: 350, textAlign:"center" }}>
           <Image className='m-auto' src={"/success.png"} width={200} height={200} alt='not found' /> <br />
           <strong className='text-center text-3xl'>Спасибо !</strong> <br /> <br />
           <p>Ваше сообщение отправлено мы свяжемся с вами в <br />
@@ -71,7 +71,7 @@ export default function NestedModal() {
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box sx={{ ...style, width: 500 }}>
+        <Box sx={{ ...style, width: 350 }}>
           <div className='flex w-full justify-between items-center'>
             <strong className='text-2xl'>Задать вопрос</strong>
             <Button onClick={handleClose} sx={{ color: "black",  }}><CloseIcon /></Button>
