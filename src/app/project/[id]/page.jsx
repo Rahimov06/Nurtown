@@ -5,5 +5,6 @@ export default function ProjectDetail() {
     const params = useParams();
     const id = params.id;
 
+    
     return <div>{id}</div>;
 }
