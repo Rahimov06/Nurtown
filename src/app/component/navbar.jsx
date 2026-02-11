@@ -47,7 +47,7 @@ export default function Navbar() {
       {/* ============================
            MOBILE DRAWER
       ============================ */}
-      
+
       <div
         className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300
                     ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}
@@ -55,6 +55,7 @@ export default function Navbar() {
       ></div>
 
       {/* Drawer (sidebar) */}
+      
       <div
         className={`fixed top-0 right-0 h-full w-[250px] bg-white shadow-xl z-50 p-6 flex flex-col gap-6
                     transition-transform duration-300
