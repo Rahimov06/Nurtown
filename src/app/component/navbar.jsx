@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className='flex w-[85%] m-auto p-[20px_0px] items-center justify-between'>
+      <nav className='flex w-full m-auto p-[20px_40px]  items-center fixed bg-white z-100 justify-between'>
 
         {/* Logo */}
         <Image
