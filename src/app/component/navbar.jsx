@@ -47,7 +47,6 @@ export default function Navbar() {
       {/* ============================
            MOBILE DRAWER
       ============================ */}
-      {/* Overlay (background dark) */}
       <div
         className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300
                     ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}
