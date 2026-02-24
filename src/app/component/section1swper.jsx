@@ -16,11 +16,12 @@ export default function Swiper1() {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={(swiper) => setCurrent(swiper.activeIndex + 1)}
             className="mySwiper"
+            
         >
             <SwiperSlide>
-                <section className="flex max-md:flex-col gap-5 w-[85%] max-md:w-[95%] m-auto justify-between items-center">
+                <section className="flex max-md:flex-col md:mt-[50px] gap-5 w-[85%] max-md:w-[95%] m-auto justify-between items-center">
                     <div>
-                        <h1 className="text-7xl max-lg:text-5xl max-md:text-4xl">
+                        <h1 className="text-7xl max-lg:text-5xl mt-[80px] md:mt-0 max-md:text-4xl">
                             <span className="text-gray-400">PROJECT</span> <br />
                             <strong>NURTOWN</strong>
                         </h1>
