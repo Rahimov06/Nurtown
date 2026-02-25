@@ -5,8 +5,9 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { TextField } from "@mui/material";
 import Link from "next/link";
-import Swiper1 from "./component/section1swper";
+import CardSwiper from "./component/cardswiper";
 import { useState } from "react";
+import AboutCompany from "./component/aboutcompony";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -25,7 +26,7 @@ export default function Home() {
     e.preventDefault();
 
 
-    setShowModal(true); 
+    setShowModal(true);
     setFormData({
       name: "",
       phone: "",
@@ -34,66 +35,12 @@ export default function Home() {
       message: ""
     });
   };
- 
+
   return (
     <>
-      <Swiper1/>
+      <CardSwiper />
 
-      <section className="max-w-[1200px] w-full px-5 mx-auto mt-20 md:mt-[150px]">
-        <div className="flex flex-col md:flex-row items-center gap-10">
-
-          {/* LEFT IMAGES */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-
-            <div className="flex flex-col gap-4 w-full sm:w-1/2">
-              <Image
-                src="/Rectangle 8.png"
-                width={270}
-                height={265}
-                alt="about"
-                className="w-full h-auto object-cover rounded-xl"
-              />
-
-              <Image
-                src="/Rectangle 10.png"
-                width={270}
-                height={140}
-                alt="about"
-                className="w-full h-auto object-cover rounded-xl"
-              />
-            </div>
-
-            <Image
-              src="/Rectangle 9.png"
-              width={250}
-              height={300}
-              alt="about"
-              className="w-full sm:w-1/2 h-auto object-cover rounded-xl"
-            />
-          </div>
-
-          {/* RIGHT TEXT */}
-          <div className="text-center md:text-left w-full md:max-w-[500px]">
-            <h1 className="text-3xl md:text-6xl text-gray-400 font-semibold">
-              О компании
-            </h1>
-
-            <p className="text-[14px] md:text-[16px] mt-5 leading-6 md:leading-7 text-gray-600">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-
-            <button className="mt-6 md:mt-10 inline-flex items-center gap-2 
-        border border-gray-200 px-6 py-3 rounded-lg 
-        hover:bg-gray-100 transition duration-300">
-              Читать <ArrowRightAltIcon />
-            </button>
-          </div>
-
-        </div>
-      </section>
-
+      <AboutCompany/>
 
       <section className="max-w-[1200px] w-full px-5 mx-auto mt-16 md:mt-24 lg:mt-[100px]">
 
@@ -289,7 +236,7 @@ export default function Home() {
                 ОТПРАВИТЬ <ArrowRightAltIcon />
               </button>
             </div>
-           
+
           </form>
 
           {/* IMAGE */}
