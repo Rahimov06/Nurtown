@@ -21,7 +21,7 @@ export default function CardSwiper() {
     };
 
     return (
-        <div className="w-full mt-25 flex flex-col md:flex-row items-center justify-center gap-8 px-4 md:px-10">
+        <div className="w-full mt-25 flex flex-col md:flex-row items-center justify-center gap-6 px-4 md:px-10">
 
             {/* Content */}
             <div className="w-full md:w-1/2 flex flex-col items-center md:items-start gap-4 md:gap-6">
