@@ -21,7 +21,7 @@ export default function ProjectDetail() {
     }
 
     return (
-        <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
+        <div className="w-full mt-[80px] px-4 sm:px-6 lg:px-8 py-8">
 
             <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
 
