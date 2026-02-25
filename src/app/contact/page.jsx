@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import NestedModal from '../component/modal';
+import NestedModal from '../component/contactcoponent/modal';
 
 const page = () => {
 

@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="fixed top-0 w-full left-0 bg-white z-50 shadow-md px-6 py-4 flex justify-between items-center">
+      <nav className="fixed top-0 w-full left-0 bg-white z-50 border-b-amber-50 px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Image
           src="/Group 11.png"
