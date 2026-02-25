@@ -8,6 +8,7 @@ export default function CardSwiper() {
     const slides = [
         { title: "NURTOWN", subtitle: "PROJECT", img: "/Rectangle 6.png" },
         { title: "NURTOWN", subtitle: "PROJECT", img: "/image 17.png" },
+        { title: "NURTOWN", subtitle: "PROJECT", img: "/image 32.png" },
     ];
 
     const [current, setCurrent] = useState(0);
