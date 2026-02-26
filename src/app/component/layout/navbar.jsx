@@ -2,8 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState} from "react";
 import CloseIcon from '@mui/icons-material/Close';
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -17,6 +18,13 @@ export default function Navbar() {
     { href: "/contact", label: "КОНТАКТЫ" },
   ];
 
+  const { t, i18n } = useTranslation()
+  console.log(i18n);
+  const handleChange = (e) => {
+    const lang = e.target.value;
+    i18n.changeLanguage(lang);  
+  };
+  
   return (
     <>
       {/* Navbar */}
@@ -44,6 +52,14 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <select
+            onClick={handleChange} 
+            className="px-3 block py-2 rounded-md border border-gray-300 bg-white text-sm font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-black transition"
+          >
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="tj">TJ</option>
+          </select>
         </div>
 
         {/* Mobile Burger */}
