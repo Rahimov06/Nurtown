@@ -11,6 +11,7 @@ import {
 } from '@mui/icons-material';
 
 const Footer = () => {
+  
   return (
     <>
       <footer className="bg-[#2C2C2C] text-white z-50 w-full relative  px-6 py-12">
