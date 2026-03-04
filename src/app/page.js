@@ -5,8 +5,8 @@ import Project from "./component/home/project";
 import Contact from "./component/home/contact";
 
 export default function Home() {
- 
- 
+
+
 
   return (
     <>
@@ -19,7 +19,6 @@ export default function Home() {
       <Project />
 
       <Contact />
-
 
     </>
   );

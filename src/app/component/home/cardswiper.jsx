@@ -1,15 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
 
 export default function CardSwiper() {
-    const slides = [
-        { title: "NURTOWN", subtitle: "PROJECT", img: "/Rectangle 6.png" },
-        { title: "NURTOWN", subtitle: "PROJECT", img: "/image 17.png" },
-        { title: "NURTOWN", subtitle: "PROJECT", img: "/image 32.png" },
-    ];
+      const { t } = useTranslation();
+
+    const slides = useMemo(() => [
+        { title: t("title"), subtitle: t("subtitle"), img: "/Rectangle 6.png" },
+        { title: t("title"), subtitle: t("subtitle"), img: "/image 17.png" },
+        { title: t("title"), subtitle: t("subtitle"), img: "/image 32.png" },
+    ], [t]);
 
     const [current, setCurrent] = useState(0);
 

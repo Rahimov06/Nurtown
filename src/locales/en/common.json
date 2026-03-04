@@ -3,5 +3,110 @@
   "gallery": "GALLERY",
   "projects": "PROJECTS",
   "certificates": "CERTIFICATES",
-  "contacts": "CONTACTS"
+  "contacts": "CONTACTS",
+  "title": "NURTOWN",
+  "subtitle": "PROJECT",
+  "about": {
+    "title": "About Company",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "button": "Read more"
+  },
+  "tasks": {
+    "title": "Main Tasks",
+    "item1": "Creating comfortable conditions and improving customer service quality",
+    "item2": "Continuously improve the quality of services provided through staff training, purchase of new equipment and enhanced marketing in the market"
+  },
+  "projects1": {
+    "title": "Our Projects",
+    "item1": "ENTERTAINMENT CENTER",
+    "item2": "ALL PROJECTS",
+    "alt": "project"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "phone": "Phone number*",
+    "email": "E-mail*",
+    "product": "Product/Service of interest",
+    "message": "Message*",
+    "privacy": "By submitting an application you agree to the privacy policy",
+    "submit": "SEND",
+    "modal": {
+      "title": "Thank you!",
+      "message": "Your application has been sent.",
+      "close": "Close"
+    },
+    "alt": "contact"
+  },
+  "footer": {
+    "information": {
+      "title": "Information",
+      "links": {
+        "home": "Home",
+        "gallery": "Gallery",
+        "projects": "Projects",
+        "certificates": "Certificates",
+        "contacts": "Contacts"
+      }
+    },
+    "contacts": {
+      "title": "Contacts",
+      "address": "100000, Republic of Kazakhstan, Karaganda, Televizionnaya str. 10",
+      "phone": "+7 (701) 77 76 811",
+      "email": "Galym.sultanov@mail.ru"
+    },
+    "social": {
+      "title": "Social Networks"
+    },
+    "copyright": "© 2019 Digital Project. All rights reserved."
+  },
+  "galleryp": {
+    "title": "GALLERY",
+    "subtitle": "PHOTO",
+    "alt": "gallery"
+  },
+  "projectspg": {
+    "page": {
+      "title": "OUR",
+      "subtitle": "PROJECTS",
+      "view": "VIEW",
+      "current": "current",
+      "of": "of"
+    },
+    "items": [
+      {
+        "title": "Comprehensive School",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "alt": "Comprehensive School"
+      },
+      {
+        "title": "Parking for 500 cars",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "alt": "Parking for 500 cars"
+      },
+      {
+        "title": "Office Interior Project",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "alt": "Office Interior Project"
+      }
+    ]
+  },
+  "projectDetail": {
+    "notFound": "Project not found",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "alt": "project"
+  },
+  "certificatespg": {
+    "title": "CERTIFICATES",
+    "subtitle": "COMPANY"
+  },
+    "contactInfo": {
+      "title": "CONTACT",
+      "subtitle": "INFORMATION",
+      "company": "«Digital Project»",
+      "address": "Karaganda, Televizionnaya str. 10",
+      "phone": "+7 (701) 77 76 811",
+      "email": "Galym.sultanov@mail.ru",
+      "mapTitle": "Google Map"
+    }
 }

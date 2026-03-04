@@ -1,27 +1,30 @@
+"use client"
 import Image from 'next/image';
 import React from 'react';
 import NestedModal from '../component/contactcoponent/modal';
+import { useTranslation } from 'react-i18next';
 
 const page = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useTranslation('common');
 
   return (
     <>
-
-      <section className='flex items-center w-[85%] m-auto justify-between gap-5 pt-[50px] pb-[50px] max-md:flex-col max-md:items-center max-md:gap-6 max-md:w-full max-md:px-4'>
+      <section className='flex items-center w-[85%] m-auto justify-between gap-5 pt-20 pb-[50px] max-md:flex-col max-md:items-center max-md:gap-6 max-md:w-full max-md:px-4'>
 
         <div className='max-md:text-center max-md:w-full'>
           <h1 className='text-6xl max-md:text-4xl'>
-            <span className='text-gray-400'>КОНТАКТНАЯ</span> <br />
-            <strong>ИНФОРМАЦИЯ</strong>
+            <span className='text-gray-400'>{t('contactInfo.title')}</span> <br />
+            <strong>{t('contactInfo.subtitle')}</strong>
           </h1>
 
           <h3 className='mt-4 text-gray-700'>
-            <strong>«Digital Project»</strong> <br />
-            г. Караганда, ул. Телевизионная 10
+            <strong>{t('contactInfo.company')}</strong> <br />
+            {t('contactInfo.address')}
           </h3>
 
-          <strong className='mt-3 block'>+7 (701) 77 76 811</strong>
-          <p className='mt-2'>Galym.sultanov@mail.ru</p>
+          <strong className='mt-3 block'>{t('contactInfo.phone')}</strong>
+          <p className='mt-2'>{t('contactInfo.email')}</p>
 
           <div className='mt-5'>
             <NestedModal />
@@ -37,16 +40,13 @@ const page = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Google Map"
+            title={t('contactInfo.mapTitle')}
           ></iframe>
         </div>
 
       </section>
-
-
     </>
   );
 }
 
 export default page;
-
