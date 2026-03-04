@@ -10,7 +10,7 @@ import i18n from "@/i18n";
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
 
   const links = [
     { href: "/", label: t("home") },
@@ -62,6 +62,19 @@ export default function Navbar() {
           </select>
         </div>
 
+        <div className=" flex md:hidden  items-center gap-2">
+
+        {/* mobile select */}
+        <select
+          value={i18n.language}
+          onChange={handleChange}
+          className="px-3 py-2 rounded-md border border-gray-300"
+        >
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+          <option value="tj">TJ</option>
+        </select>
+
         <div
           className="md:hidden flex flex-col gap-1 cursor-pointer"
           onClick={() => setOpen(true)}
@@ -70,6 +83,8 @@ export default function Navbar() {
           <span className="w-7 h-0.5 bg-black"></span>
           <span className="w-7 h-0.5 bg-black"></span>
         </div>
+        </div>
+
       </nav>
 
       <div
@@ -106,16 +121,7 @@ export default function Navbar() {
           </Link>
         ))}
 
-        {/* mobile select */}
-        <select
-          value={i18n.language}
-          onChange={handleChange}
-          className="px-3 py-2 rounded-md border border-gray-300"
-        >
-          <option value="en">EN</option>
-          <option value="ru">RU</option>
-          <option value="tj">TJ</option>
-        </select>
+
       </div>
     </>
   );

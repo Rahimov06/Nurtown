@@ -71,7 +71,7 @@ export default function NestedModal() {
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box sx={{ ...style, width: 350 }}>
+        <Box sx={{ ...style, width: 500 }}>
           <div className='flex w-full justify-between items-center'>
             <strong className='text-2xl'>Задать вопрос</strong>
             <Button onClick={handleClose} sx={{ color: "black",  }}><CloseIcon /></Button>

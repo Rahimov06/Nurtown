@@ -1,9 +1,13 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const page = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useTranslation();
+
   const images = [
     "/image.png",
     "/Rectangle 23.png",
@@ -25,12 +29,11 @@ const page = () => {
     "/Rectangle 27.png",
     "/Rectangle 29.png",
     "/Rectangle 31.png",
-
   ];
 
   const imagesPerPage = 10;
   const totalPages = Math.ceil(images.length / imagesPerPage);
-
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [current, setCurrent] = useState(0);
 
   const prevSlide = () => {
@@ -44,18 +47,20 @@ const page = () => {
   const startIndex = current * imagesPerPage;
   const currentImages = images.slice(startIndex, startIndex + imagesPerPage);
 
+  // Формат кардани рақамҳо барои намоиш (01, 02)
+  const formatNumber = (num) => {
+    return num < 10 ? `0${num}` : num;
+  };
+
   return (
     <>
-
       <h1 className='text-7xl max-md:text-4xl p-[80px_8%] md:text-start pb-[50px] text-center'>
-        <span className='text-gray-400'>ГАЛЕРЕЯ</span> <br />
-        <strong>ФОТОГРАФИЙ</strong>
+        <span className='text-gray-400'>{t('galleryp.title')}</span> <br />
+        <strong>{t('galleryp.subtitle')}</strong>
       </h1>
 
       <section className="w-full max-md:px-4">
-
         <div className="max-w-[85%] mx-auto p-4 hidden md:block overflow-hidden">
-
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${current * 100}%)` }}
@@ -75,7 +80,7 @@ const page = () => {
                       src={src}
                       width={210}
                       height={260}
-                      alt={`img-${i}`}
+                      alt={`${t('galleryp.alt')}-${pageIndex * imagesPerPage + i + 1}`}
                       className="w-full h-[260px] object-cover rounded-lg"
                     />
                   ))}
@@ -87,29 +92,29 @@ const page = () => {
           {/* Controls */}
           <div className='flex items-center gap-4 mt-8'>
             <div className="text-3xl text-gray-500">
-              0{current + 1} / 0{totalPages}
+              {formatNumber(current + 1)} / {formatNumber(totalPages)}
             </div>
 
             <button
               onClick={prevSlide}
-              className="p-3 bg-gray-200 rounded-xl"
+              className="p-3 bg-gray-200 rounded-xl hover:bg-gray-300 transition"
+              aria-label={t('gallery.previous')}
             >
               <FaArrowLeft size={20} />
             </button>
 
             <button
               onClick={nextSlide}
-              className="p-3 bg-gray-200 rounded-xl"
+              className="p-3 bg-gray-200 rounded-xl hover:bg-gray-300 transition"
+              aria-label={t('gallery.next')}
             >
               <FaArrowRight size={20} />
             </button>
           </div>
-
         </div>
 
         {/* Mobile Slider */}
         <div className="md:hidden w-full overflow-hidden mt-10">
-
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${current * 100}%)` }}
@@ -121,7 +126,7 @@ const page = () => {
               return (
                 <div
                   key={pageIndex}
-                  className="min-w-full flex flex-row items-center gap-6"
+                  className="min-w-full flex flex-row items-center gap-6 overflow-x-auto px-4"
                 >
                   {pageImages.slice(0, 5).map((src, i) => (
                     <Image
@@ -129,8 +134,8 @@ const page = () => {
                       src={src}
                       width={400}
                       height={250}
-                      alt={`img-mobile-${i}`}
-                      className="w-[85%] h-[250px] object-cover rounded-lg"
+                      alt={`${t('gallery.alt')}-mobile-${pageIndex * imagesPerPage + i + 1}`}
+                      className="min-w-[85%] h-[250px] object-cover rounded-lg"
                     />
                   ))}
                 </div>
@@ -141,30 +146,29 @@ const page = () => {
           {/* Controls */}
           <div className="flex items-center gap-4 mt-6 justify-center">
             <div className="text-3xl text-gray-500">
-              0{current + 1} / 0{totalPages}
+              {formatNumber(current + 1)} / {formatNumber(totalPages)}
             </div>
 
             <button
               onClick={prevSlide}
-              className="p-3 bg-gray-200 rounded-xl"
+              className="p-3 bg-gray-200 rounded-xl hover:bg-gray-300 transition"
+              aria-label={t('gallery.previous')}
             >
               <FaArrowLeft size={20} />
             </button>
 
             <button
               onClick={nextSlide}
-              className="p-3 bg-gray-200 rounded-xl"
+              className="p-3 bg-gray-200 rounded-xl hover:bg-gray-300 transition"
+              aria-label={t('gallery.next')}
             >
               <FaArrowRight size={20} />
             </button>
           </div>
-
         </div>
-
       </section>
-
     </>
   );
-}
+};
 
 export default page;

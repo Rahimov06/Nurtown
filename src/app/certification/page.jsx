@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const page = () => {
@@ -13,6 +14,7 @@ const page = () => {
     { src: "/photo_2019-05-23_19-46-10-800x1067.png", alt: "certificate 5" },
   ];
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [current, setCurrent] = useState(0);
 
   const prevSlide = () => {
@@ -26,12 +28,14 @@ const page = () => {
       prev >= images.length - 3 ? 0 : prev + 1
     );
   };
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useTranslation();
 
   return (
     <>
       <h1 className='text-4xl md:text-7xl text-center md:text-start p-[100px_8%]'>
-        <span className='text-gray-400'>СЕРТИФИКАТЫ</span><br />
-        <strong>КОМПАНИИ</strong>
+        <span className='text-gray-400'>{t('certificatespg.title')}</span><br />
+        <strong>{t('certificatespg.subtitle')}</strong>
       </h1>
 
       {/* Slider */}

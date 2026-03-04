@@ -3,8 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { useTranslation } from "react-i18next";
 
 const AboutCompany = () => {
+    const {t} = useTranslation()
     return (
         <section className="max-w-[1200px] w-full px-4 sm:px-6 mx-auto mt-20 md:mt-[150px]">
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
@@ -40,19 +42,17 @@ const AboutCompany = () => {
                 {/* RIGHT TEXT */}
                 <div className="text-center md:text-left w-full md:max-w-[500px] flex flex-col items-center md:items-start">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-400 font-semibold">
-                        О компании
+                        {t("about.title")}
                     </h1>
 
                     <p className="text-sm sm:text-[15px] md:text-[16px] mt-4 sm:mt-5 leading-6 md:leading-7 text-gray-600">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                     {t("about.description")}
                     </p>
 
-                    <button className="mt-5 sm:mt-6 md:mt-10 inline-flex items-center gap-2 
-                        border border-gray-200 px-5 sm:px-6 py-2 sm:py-3 rounded-lg 
+                    <button className="mt-5 sm:mt-6 md:mt-10 inline-flex items-center gap-2
+                        border border-gray-200 px-5 sm:px-6 py-2 sm:py-3 rounded-lg
                         hover:bg-gray-100 transition duration-300 text-sm sm:text-base md:text-base">
-                        Читать <ArrowRightAltIcon className="text-base sm:text-lg" />
+                        {t("about.button") } <ArrowRightAltIcon className="text-base sm:text-lg" />
                     </button>
                 </div>
 
